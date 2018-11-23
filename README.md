@@ -33,52 +33,52 @@ options:
 
 options:
 
- - friendlyName - required
+ - friendly_name - required
  - url - required
  - type - required (Default: 1)
- - subType - optional (required for port monitoring)
+ - sub_type - optional (required for port monitoring)
  - port - optional (required for port monitoring)
- - keywordType - optional (required for keyword monitoring)
- - keywordValue - optional (required for keyword monitoring)
- - httpUsername - optional
- - httpPassword - optional
- - alertContacts - optional (array of alert contact ids)
+ - keyword_type - optional (required for keyword monitoring)
+ - keyword_value - optional (required for keyword monitoring)
+ - http_username - optional
+ - http_password - optional
+ - alert_contacts - optional (array of alert contact ids)
  - interval - optional (in minutes)
 
 ### cl.editMonitor(options, fn(err))
 
 options:
 
- - monitorID - required
- - friendlyName - optional
+ - id - required
+ - friendly_name - optional
  - url - optional
- - subType - optional (used only for port monitoring)
+ - sub_type - optional (used only for port monitoring)
  - port - optional (used only for port monitoring)
- - keywordType - optional (used only for keyword monitoring)
- - keywordValue - optional (used only for keyword monitoring)
- - httpUsername - optional
- - httpPassword - optional
- - alertContacts - optional (array of alert contact ids)
+ - keyword_type - optional (used only for keyword monitoring)
+ - keyword_value - optional (used only for keyword monitoring)
+ - http_username - optional
+ - http_password - optional
+ - alert_contacts - optional (array of alert contact ids)
  - interval - optional (in minutes)
 
 ### cl.deleteMonitor(id, fn(err))
 
 options:
 
- - monitorID - required
+ - id - required
 
 ### cl.resetMonitor(id, fn(err))
 
 options:
 
- - monitorID - required
+ - id - required
 
 
 ### cl.getAlertContacts(options, fn(err, alertContacts))
 
 options:
 
- - alertContacts - optional (array of alert contact ids)
+ - alert_contacts - optional (array of alert contact ids)
  - offset - optional (record to start paginating. Default: 0)
  - limit - optional (number of records to return. Default and max: 50)
 
